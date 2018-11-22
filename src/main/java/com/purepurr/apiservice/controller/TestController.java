@@ -9,6 +9,6 @@ public class TestController {
 
     @RequestMapping(value = "/test", method = RequestMethod.GET)
     public String test() {
-        return "hello, nigga, i'm api";
+        return "hello, i'm api";
     }
 }
