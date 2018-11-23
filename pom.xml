@@ -38,16 +38,17 @@
 
 		<!-- MIGRATION -->
 		<dependency>
-			<groupId>org.liquibase</groupId>
-			<artifactId>liquibase-core</artifactId>
-			<version>3.6.2</version>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
+			<version>5.2.1</version>
 		</dependency>
 
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
-		</dependency>
+
+		<!--<dependency>-->
+			<!--<groupId>com.h2database</groupId>-->
+			<!--<artifactId>h2</artifactId>-->
+			<!--<scope>runtime</scope>-->
+		<!--</dependency>-->
 
 		<!-- ORM -->
 		<dependency>
@@ -86,6 +87,13 @@
 			<artifactId>zookeeper</artifactId>
 			<version>3.4.10</version>
 		</dependency>
+
+		<!-- DB DRIVER -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.13</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -106,6 +114,14 @@
 					</dependency>
 				</dependencies>
 			</plugin>
+
+			<!-- MIGRATION -->
+			<plugin>
+				<groupId>org.flywaydb</groupId>
+				<artifactId>flyway-maven-plugin</artifactId>
+				<version>5.2.1</version>
+			</plugin>
+
 		</plugins>
 	</build>
 

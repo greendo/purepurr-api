@@ -12,3 +12,5 @@ logging:
 debug: false
 
 server.port: 9696
+
+liquibase.change-log: classpath:liquibase-changelog.xml
