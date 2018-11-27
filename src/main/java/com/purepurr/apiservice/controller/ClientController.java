@@ -1,0 +1,6 @@
+package com.purepurr.apiservice.controller;
+
+public class ClientController {
+
+    //TODO: STORE SESSION IN REDIS https://medium.com/@odedia/spring-session-redis-part-i-overview-a5f6c7446c8b
+}
