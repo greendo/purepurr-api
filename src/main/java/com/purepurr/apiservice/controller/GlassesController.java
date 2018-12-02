@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/glasses")
 public class GlassesController {
 
+    /** curl -X GET 'http://localhost:9696/glasses/verify' -F rooted=true -F dateExpiration=1 -F counter=1 -F datePayment=1 */
     @ResponseStatus(HttpStatus.OK)
     @RequestMapping(value = "/verify", method = RequestMethod.GET)
     public String verify(
@@ -20,7 +21,6 @@ public class GlassesController {
         v.save();
         return "hello";
     }
-    //curl -X GET 'http://localhost:9696/glasses/verify' -F rooted=true -F dateExpiration=1 -F counter=1 -F datePayment=1
 
     @RequestMapping(value = "/video", method = RequestMethod.GET)
     public String download() {

@@ -13,8 +13,6 @@ debug: false
 
 server.port: 9696
 
-liquibase.change-log: classpath:liquibase-changelog.xml
-
 #ebean
 ebean.db.ddl.generate: true
 ebean.db.ddl.run: true
@@ -22,3 +20,9 @@ datasource.db.username: user
 datasource.db.password: password
 datasource.db.databaseUrl: jdbc:mysql://127.0.0.1:3306/purepurr
 datasource.db.databaseDriver: com.mysql.cj.jdbc.Driver
+
+#flyway
+flyway.locations: filesystem:db/migration
+flyway.url: jdbc:mysql://127.0.0.1:3306/purepurr
+flyway.user: user
+flyway.password: password
